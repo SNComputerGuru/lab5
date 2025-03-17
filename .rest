@@ -1,0 +1,45 @@
+GET http://localhost:3000/whoami
+
+###
+GET http://localhost:3000/books
+
+###
+GET http://localhost:3000/books/5
+
+###
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "id": "3",
+  "title": "1984",
+  "details": [
+    {
+      "id": "1",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "publicationYear": 1949
+    }
+  ]
+}
+
+###
+
+PUT http://localhost:3000/books/5
+Content-Type: application/json
+
+{
+  "details": [
+    {
+      "id": "1",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "publicationYear": 1949
+    }
+  ]
+}
+
+###
+
+
+DELETE http://localhost:3000/books/1
